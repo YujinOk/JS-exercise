@@ -407,5 +407,5 @@ const jonas = {
 console.log(jonas.returnFriends());
 
 console.log(jonas.getSummary());
-console.log(jonas.calcAge());
+
 
