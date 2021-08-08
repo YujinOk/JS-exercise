@@ -1,4 +1,3 @@
-
 // let country = "south Korea"
 // let continent = "Australia"
 // let population = "52000000"
@@ -9,7 +8,6 @@
 
 // const JohnWeight = 92;
 // const JohnHeight = 1.95;
-
 
 // const MarkBMI = MarkWeight / (MarkHeight * MarkHeight);
 // const JohnBMI = JohnWeight / (JohnHeight * JohnHeight);
@@ -30,7 +28,6 @@
 
 // console.log(isdolphineScore, iskoalasScore);
 
-
 // if (isdolphineScore > iskoalasScore && isdolphineScore >= 100) {
 //     console.log('winnder is Dolphines');
 // } else if (iskoalasScore > isdolphineScore) {
@@ -38,7 +35,6 @@
 // } else if (isdolphineScore === iskoalasScore) {
 //     console.log('both win the trophy!');
 // }
-
 
 // const bills = (275 + 40 + 430) / 3
 // console.log(bills)
@@ -51,8 +47,6 @@
 // const bill = 275;
 // let tip = bill <= 300 && bill >= 50 ? bill * .15 : bill * 0.2;
 // console.log(`the bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-
-
 
 // let tip;
 // const bill = 275;
@@ -84,7 +78,7 @@
 //     }
 // }
 
-// Coding Project solution 
+// Coding Project solution
 
 /*
 const calcAverage = (a, b, c) => (a + b + c) / 3;
@@ -127,9 +121,9 @@ const tip = calcTip;
 
 const bills [125, 555, 44];
 const tip1 []
-*/
 
-// Coding challenge #2 solution 
+
+// Coding challenge #2 solution
 const calcTip = function (bill) {
     return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
@@ -142,3 +136,78 @@ const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(totals);
 
 console.log(bills, tips);
+
+
+// Coding Challenge #3K myself
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI1: function () {
+        return (this.mass / this.height) * 2;
+    }
+}
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95
+    calcBMI2: function () {
+        return (this.mass / this.height) * 2;
+    }
+
+}
+
+// Coding Chllenge #3 solution
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+
+    }
+
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+
+};
+mark.calcBMI();
+john.calcBMI();
+
+console.log(mark.bmi, john.bmi);
+
+if (mark.bmi > john.bmi) {
+    console.log(`${mark.fullName}'s BMI (${mark.bmi})is higher than ${john.fullName}'s BMI (${john.bmi})`)
+} else if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName}'s BMI (${john.bmi})is higher than ${john.fullName}'s BMI (${john.bmi})`)
+}
+*/
+
+// Coding challenge #4
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++);
+{
+  const tip = calcTip(bills[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+console.log(tips);
+console.log(totals);
+console.log(calcTip);
