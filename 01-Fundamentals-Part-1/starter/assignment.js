@@ -190,7 +190,7 @@ if (mark.bmi > john.bmi) {
 } else if (john.bmi > mark.bmi) {
     console.log(`${john.fullName}'s BMI (${john.bmi})is higher than ${john.fullName}'s BMI (${john.bmi})`)
 }
-*/
+
 
 // Coding challenge #4
 
@@ -211,3 +211,87 @@ for (let i = 0; i < bills.length; i++);
 console.log(tips);
 console.log(totals);
 console.log(calcTip);
+
+
+let myCountry = "south Korea";
+let myCountryPopulation = "52 million";
+
+console.log(myCountry, myCountryPopulation);
+
+
+// Coding Challenge 1
+// 1. Store mark's and John's mass and height in variables
+const markBMI1 = 78 / (1.69 * 1.69);
+const markBMI2 = 95 / (1.88 * 1.88);
+const markAverageBMI = (markBMI1 + markBMI2) / 2;
+
+const johnBMI1 = 92 / 1.95 ** 2;
+const johnBMI2 = 85 / 1.76 ** 2;
+const johnAverageBMI = (johnBMI1 + johnBMI2) / 2;
+
+// 2. calculate both their BMIs using the formula ( you can even implement both ersions)
+// 3. Create a boolean variable ' markHigherBMI' CONTAINING INFORMATION ABOUT WHETHER mARK HAS A HIGHER BMI than John
+//const markHigherBMI = true;
+// solution :
+const markHigherBMI = markAverageBMI > johnAverageBMI;
+
+
+//1. Calculate the average score for each team, using the test dat below
+const avgDolphines = (96 + 108 + 89) / 3;
+const avgKoalas = (88 + 91 + 110) / 3;
+
+//2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well ( draw means they have the same average score).
+if (avgDolphines > avgKoalas) {
+  console.log("The winner is Dolphines!");
+} else if (avgDolphines < avgKoalas) {
+  console.log("The winner is Koalas");
+} else if (avgDolphines === avgKoalas) {
+  console.log("both win the trophy!");
+}
+
+// BONUS 1: Include a requirement for a minimum socre of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: use a logical operator to test for minimum socre, as well as multiple else- if blocks
+const minimumScore = 100;
+const dolphineScore = 97 + 112 + 101;
+const koalasScore = 109 + 95 + 123;
+
+const dolphineScoreAverage = dolphineScore / 3;
+const koalasScoreAverage = koalasScore / 3;
+
+if (
+  dolphineScoreAverage > koalasScoreAverage &&
+  dolphineScoreAverage >= minimumScore
+) {
+  console.log("The winnder is Dolphines");
+} else if (
+  koalasScoreAverage > dolphineScoreAverage &&
+  koalasScoreAverage >= minimumScore
+) {
+  console.log("The winnder is Koalas");
+} else if (
+  dolphineScoreAverage === koalasScoreAverage &&
+  dolphineScoreAverage >= minimumScore &&
+  koalasScoreAverage >= minimumScore
+) {
+  console.log("No team wins the trophy");
+}
+
+// BONUS 2: Minimum score also applies to a draw! so a draw only happens when both teams have the same score and both have a score greater or equal 100 points. otherise, no team wins the trophy.
+*/
+// Coding Challenge #4
+const bill = 275;
+
+const calcTip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(
+  `The bill was ${bill}, the tip was ${calcTip}, and the tal value ${
+    bill + calcTip
+  }`
+);
+
+// const bill = 275;
+// if (bill >= 50 && bill <= 300) {
+//   const calcTip = "${bill}" * 0.15;
+// } else {
+//   const calcTip = "${bill}" * 0.2;
+// }
+// console.log(calcTip);

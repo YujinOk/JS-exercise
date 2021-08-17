@@ -512,7 +512,7 @@ const messureKelvin = function () {
   return kelvin;
 };
 console.log(measureKelvin());
-*/
+
 // ARRAY methods "map"
 let vals = [2, 4, 6, 8, 9];
 console.log(vals);
@@ -520,3 +520,258 @@ vals = vals.map((x) => x * 2);
 console.log(vals);
 
 vals.map((x) => ({ number: x, numberTimesTwo: x * 2 }));
+
+
+let js = "amazing";
+console.log(40 + 8 + 23 - 10);
+
+console.log("jonas");
+console.log(23);
+
+let firstName = "Yujin";
+console.log(firstName);
+
+let myFirstJob = "Dance Instructor";
+let myCurrentJob = "lab tech";
+console.log(myCurrentJob);
+
+// Math Operators
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJonas);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+
+const firstName = "Jonas";
+const lastName = "Schemdtman";
+console.log(firstName + " " + lastName);
+
+// Assignment operators
+let x = 10 + 5;
+x += 10; // x = x+10 = 25
+x *= 4; // x = x*4 = 100
+x++; // x = x + 1
+x--; // x = x - 1
+console.log(x);
+
+// Comparison operators
+console.log(ageJonas > ageSarah);
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
+
+
+const now = 2037;
+const ageJonas = now - 1991;
+const ageSarah = now - 2018;
+
+console.log(now - 1991 > now - 2018); // math operation proceeds first before comparison operators
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+
+const averageAge = (ageJonas + ageSarah) / 2;
+console.log(ageJonas, ageSarah, averageAge);
+
+
+const firstName = "jonas";
+const job = "teacher";
+const birthYear = 1991;
+const year = 2037;
+
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + "years old" + job + "!";
+console.log(jonas);
+// template literals, strings
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+
+console.log(`Just a regular string...`);
+
+console.log(" String with \n\
+multiple \n\
+lines");
+
+console.log(`string
+multiple
+lines`); // this is much easier than the code above. We can create multiple lines just by using template literals ``
+
+
+const age = 15;
+// const isOldEnouh = age >= 18;
+
+// if (isOldEnouh) {
+//   console.log("Sarah can start driving license 😊");
+// }
+
+if (age >= 18) {
+  // this is a lot more common
+  console.log("Sarah can start driving license 😊");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(` Sarah is too young. Wit another ${yearsLeft} years :)`);
+}
+
+const birthYear = 2012;
+
+let century;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+
+
+const hasDriverLicense = true; //A
+const hasGoodVision = true; //B
+
+console.log(hasDriverLicense && hasGoodVision);
+console.log(hasDriverLicense || hasGoodVision);
+console.log(!hasDriverLicense);
+
+// const shouldDrive = hasDriverLicense && hasGoodVision;
+// if (hasDriverLicense && hasGoodVision) {
+//   console.log("Sarah is able to drive!");
+// } else {
+//   console.log("Someone else should drive...");
+// }
+
+const isTired = true; //C
+console.log(hasDriverLicense || hasGoodVision || isTired);
+
+if (hasDriverLicense && hasGoodVision && !isTired) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive...");
+}
+
+
+const day = "thursday";
+
+switch (
+  day // day ==='monday'
+) {
+  case "monday":
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+  case "friday":
+    console.log("record videods");
+    break;
+  case " saturday":
+  case " sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("record videods");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend!");
+}
+
+
+// Function Declaration (similar to variable declaration )
+function calcAge1(birthYear) {
+  return 2037 - birthYear;
+}
+const age1 = calcAge1(1991);
+
+// Funtion Expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
+
+
+function logger() {
+  console.log("My name is Jonas");
+}
+logger(); // calling/ running/ invoking function
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0); // this is going to be replaced by result which is "return" so we need to store into variables
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+function mathProcessor(n1, n2) {
+  return n1 * n2;
+}
+const mathIsFun = mathProcessor(2, 4);
+console.log(mathIsFun);
+
+
+// Function declaration vs Expression
+function calcAge1(birthYear) {
+  const age = 2037 - birthYear;
+  return age;
+}
+
+const age1 = calcAge1(1991); // can call the function before function body or after for Function Declaration
+console.log(age1);
+
+// Function Expression (expression produces value thus we can store it into variables )
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+console.log(age1, age2);
+
+// const multiplyIsFun = function (n1, n2) {
+//   return n1 * n2;
+// };
+// const number = multiplyIsFun(2, 4);
+// console.log(number);
+
+
+// Function Expression
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+// Arrow Function
+const calcAge3 = (birthYear) => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
+
+const multiplyIsFun = (n1, n2) => n1 * n2;
+const number = multiplyIsFun(2, 4);
+console.log(number);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  //   return retirement;
+  return `${firstName} retures in ${retirement} years`;
+};
+
+console.log(yearsUntilRetirement(1991, "Jonas"));
+*/
